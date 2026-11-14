@@ -166,7 +166,7 @@ export const WasteScanner: React.FC<Props> = ({
         const formData = new FormData();
         formData.append("file", blob, "image.jpg");
 
-        const res = await fetch('https://ecosan-ai.vercel.app/api/predict', {
+        const res = await fetch('https://ecosan-ai.onrender.com/api/predict', {
           method: 'POST',
           body: formData,
         });
