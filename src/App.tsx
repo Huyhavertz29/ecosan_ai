@@ -28,7 +28,7 @@ export default function App() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await fetch('/api/logs');
+        const res = await fetch('https://ecosan-ai.vercel.app/api/logs');
         if (res.ok) {
           const data = await res.json();
           setRecords(data);
@@ -61,7 +61,7 @@ export default function App() {
   // 3. Hàm lưu xuống Database
   const saveToDB = async (record: WasteLogRecord) => {
     try {
-      const res = await fetch('/api/logs', {
+      const res = await fetch('https://ecosan-ai.vercel.appx`/api/logs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(record),
@@ -103,7 +103,7 @@ export default function App() {
   // 6. Xóa 1 record
   const handleDeleteRecord = async (id: string) => {
     try {
-      const res = await fetch(`/api/logs/${id}`, { method: 'DELETE' });
+      const res = await fetch(`https://ecosan-ai.vercel.app/api/logs/${id}`, { method: 'DELETE' });
       if (res.ok) {
         setRecords((prev) => prev.filter((r) => r.id !== id));
         showToast('Đã xóa khỏi nhật ký.');
@@ -117,7 +117,7 @@ export default function App() {
   const handleClearAllRecords = async () => {
     if (window.confirm('Bạn có chắc chắn muốn xóa toàn bộ dữ liệu lịch sử không?')) {
       try {
-        const res = await fetch('/api/logs', { method: 'DELETE' });
+        const res = await fetch('https://ecosan-ai.vercel.app/api/logs', { method: 'DELETE' });
         if (res.ok) {
           setRecords([]);
           showToast('Đã xóa toàn bộ dữ liệu.');

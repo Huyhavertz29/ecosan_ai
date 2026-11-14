@@ -3,11 +3,16 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
 import Database from 'better-sqlite3';
+import cors from 'cors';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+
 const app = express();
+app.use(cors({
+  origin: 'https://ecosan-ai.vercel.app' // Điền link Vercel của bạn vào đây
+}));
 app.use(express.json({ limit: '25mb' }));
 
 // ==========================================

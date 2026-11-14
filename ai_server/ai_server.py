@@ -9,7 +9,7 @@ app = FastAPI()
 # Cho phép React (cổng 3000) gọi sang Python (cổng 8000)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://ecosan-ai.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
