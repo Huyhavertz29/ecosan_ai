@@ -1,0 +1,6 @@
+{
+  "name": "EcoScan AI - Phân Loại Rác & Tái Chế Thông Minh",
+  "description": "Ứng dụng AI nhận diện và phân loại rác thông minh qua hình ảnh, phân tích chi tiết vật liệu, đánh giá mức độ tái chế, hướng dẫn xử lý chuẩn xác và thống kê xu hướng lượng rác theo thời gian.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
